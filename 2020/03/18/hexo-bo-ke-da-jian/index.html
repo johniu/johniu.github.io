@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 秋高气爽">
+    <meta name="keywords" content="hexo博客搭建, 秋高气爽">
     <meta name="description" content="世界树">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 秋高气爽</title>
+    <title>hexo博客搭建 | 秋高气爽</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -306,12 +306,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">hexo博客搭建</h1>
                 </div>
             </div>
         </div>
@@ -440,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-03-15
+                    2020-03-18
                 </div>
                 
 
@@ -449,7 +449,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    125
+                    1.2k
                 </div>
                 
 
@@ -462,16 +462,52 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-<script>
+                <p>安装node.js<br>安装hexo</p>
+<p>init</p>
+<p>$ hexo init [folder]</p>
+<p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
+<p>new</p>
+<p>$hexo new [layout] <title>&lt;/p&gt;
+&lt;p&gt;新建一篇文章。如果标题包含空格的话，请使用引号括起来。&lt;/p&gt;
+&lt;p&gt;参数    描述&lt;br&gt;-p, –path    自定义新文章的路径&lt;br&gt;-r, –replace    如果存在同名文章，将其替换&lt;br&gt;-s, –slug    文章的 Slug，作为新文章的文件名和发布后的 URL&lt;/p&gt;
+&lt;p&gt;$hexo new page –path about/me “About me”&lt;br&gt;or&lt;br&gt;$hexo new page –path about/me&lt;/p&gt;
+&lt;p&gt;generate&lt;/p&gt;
+&lt;p&gt;$hexo generate 可以简写为 $hexo g&lt;/p&gt;
+&lt;p&gt;publish&lt;/p&gt;
+&lt;p&gt;$ hexo publish [layout] &lt;filename&gt;&lt;/p&gt;
+&lt;p&gt;发表草稿。&lt;/p&gt;
+&lt;p&gt;server&lt;/p&gt;
+&lt;p&gt;$ hexo server&lt;/p&gt;
+&lt;p&gt;启动服务器。默认情况下，访问网址为： &lt;a href="http://localhost:4000/。" target="_blank" rel="noopener"&gt;http://localhost:4000/。&lt;/a&gt;&lt;br&gt;选项    描述&lt;br&gt;-p, –port    重设端口&lt;br&gt;-s, –static    只使用静态文件&lt;br&gt;-l, –log    启动日记记录，使用覆盖记录格式&lt;/p&gt;
+&lt;p&gt;deploy&lt;/p&gt;
+&lt;p&gt;$ hexo deploy 可简写为 $ hexo d&lt;/p&gt;
+&lt;p&gt;部署网站。&lt;/p&gt;
+&lt;p&gt;render&lt;/p&gt;
+&lt;p&gt;$ hexo render &lt;file1&gt; [file2] …&lt;/p&gt;
+&lt;p&gt;渲染文件。&lt;/p&gt;
+&lt;p&gt;migrate&lt;/p&gt;
+&lt;p&gt;$ hexo migrate &lt;type&gt;&lt;/p&gt;
+&lt;p&gt;从其他博客系统 迁移内容。&lt;/p&gt;
+&lt;p&gt;clean&lt;/p&gt;
+&lt;p&gt;$ hexo clean&lt;/p&gt;
+&lt;p&gt;清除缓存文件 (db.json) 和已生成的静态文件 (public)。&lt;/p&gt;
+&lt;p&gt;在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。&lt;/p&gt;
+&lt;p&gt;list&lt;/p&gt;
+&lt;p&gt;$ hexo list &lt;type&gt;&lt;/p&gt;
+&lt;p&gt;列出网站资料。&lt;/p&gt;
+&lt;p&gt;version&lt;/p&gt;
+&lt;p&gt;$ hexo version&lt;/p&gt;
+&lt;p&gt;显示 Hexo 版本。&lt;/p&gt;
+&lt;p&gt;选项&lt;br&gt;安全模式 $ hexo –safe     在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。&lt;br&gt;调试模式 $ hexo –debug    在终端中显示调试信息并记录到 debug.log。当您碰到问题时，可以尝试用调试模式重新执行一次，并 提交调试信息到 GitHub。&lt;br&gt;简洁模式 $ hexo –silent   隐藏终端信息。&lt;/p&gt;
+&lt;p&gt;自定义配置文件的路径&lt;/p&gt;
+&lt;h1 id="使用-custom-yml-代替默认的-config-yml"&gt;&lt;a href="#使用-custom-yml-代替默认的-config-yml" class="headerlink" title="使用 custom.yml 代替默认的 _config.yml"&gt;&lt;/a&gt;使用 custom.yml 代替默认的 _config.yml&lt;/h1&gt;&lt;p&gt;$ hexo server –config custom.yml&lt;/p&gt;
+&lt;p&gt;自定义配置文件的路径，指定这个参数后将不再使用默认的 _config.yml。&lt;/p&gt;
+&lt;p&gt;也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径&lt;/p&gt;
+&lt;h1 id="使用-custom-yml-custom2-json-和-custom3-yml，其中-custom3-yml-优先级最高，其次是-custom2-json"&gt;&lt;a href="#使用-custom-yml-custom2-json-和-custom3-yml，其中-custom3-yml-优先级最高，其次是-custom2-json" class="headerlink" title="使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json"&gt;&lt;/a&gt;使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json&lt;/h1&gt;&lt;p&gt;$ hexo generate –config custom.yml,custom2.json,custom3.yml&lt;/p&gt;
+&lt;p&gt;当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 _multiconfig.yml。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。&lt;br&gt;这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。&lt;/p&gt;
+&lt;p&gt;显示草稿&lt;br&gt;$ hexo –draft&lt;br&gt;显示 source/_drafts 文件夹中的草稿文章。&lt;/p&gt;
+&lt;p&gt;自定义 CWD&lt;br&gt;$ hexo –cwd /path/to/cwd&lt;br&gt;自定义当前工作目录（Current working directory）的路径。&lt;/p&gt;
+</title></p><script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -514,7 +550,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://johniu.github.io/2020/03/15/hello-world/">https://johniu.github.io/2020/03/15/hello-world/</a>
+                    <a href="https://johniu.github.io/2020/03/18/hexo-bo-ke-da-jian/">https://johniu.github.io/2020/03/18/hexo-bo-ke-da-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -715,69 +751,35 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/03/15/wo-de-di-yi-pian-bo-ke/">
+                <a href="/2020/03/18/hexo-bo-ke-da-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="'我的第一篇博客'">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="hexo博客搭建">
                         
-                        <span class="card-title">'我的第一篇博客'</span>
+                        <span class="card-title">hexo博客搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ##我的第一篇博客Hello 大家好第一篇博客写首诗来应下景吧默默耕耘不问收获，福至心灵神明自得百尺竿头更进一步，阴阳合抱一气化三
-##我顺便录制一个视频
-##我更改了GitHub 登录方式 ：密钥的方式
-
-        document
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-03-15
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            岁月无声
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/03/15/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            安装node.js安装hexo
+init
+$ hexo init [folder]
+新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。
+new
+$hexo new [layout] &lt;/p&gt;
+&l
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
                             </span>
                         <span class="publish-author">
                             
@@ -788,6 +790,47 @@
                     </div>
                 </div>
 
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/03/18/jie-kou-ce-shi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="python接口测试">
+                        
+                        <span class="card-title">python接口测试</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Python语言实现 Web API接口测试    根据接口测试用例，构造出相应的HTTP请求，发送给服务端,接受并检查响应消息
+Http协议浏览器和网站服务器之间服务器和服务器之间
+API文档-接口信息
+抓包工具
+内置库httplib、u
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-03-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            岁月无声
+                            
+                        </span>
+                    </div>
+                </div>
                 
             </div>
         </div>
