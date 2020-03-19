@@ -11,6 +11,22 @@
         <content type="html"><![CDATA[<h2 id="git-clone速度太慢"><a href="#git-clone速度太慢" class="headerlink" title="git clone速度太慢"></a>git clone速度太慢</h2><p>在国内，你们肯定发现使用git clone的速度实在太慢，git clone的速度可能会让你难以承受</p><a id="more"></a><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><blockquote><p>git clone特别慢是因为github.global.ssl.fastly.net域名被限制了<br>只要找到这个域名对应的ip地址，然后在hosts文件中加上ip–&gt;域名的映射，刷新DNS缓存便可</p></blockquote><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><h3 id="1、查找域名对应的ip地址"><a href="#1、查找域名对应的ip地址" class="headerlink" title="1、查找域名对应的ip地址"></a>1、查找域名对应的ip地址</h3><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>nslookup github.global.ssl.fastly.Net</code></pre><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>nslookup github.com</code></pre><p>hosts文件 地址<br>C:\Windows\System32\drivers\etc\hosts<br>Linux的hosts文件路径在/etc/hosts中</p><p>host文件打开方式<br>Linux<br>sudo vi /etc/hosts<br>Windows<br>下载VIM手动打开</p><h3 id="2、修改hosts文件"><a href="#2、修改hosts文件" class="headerlink" title="2、修改hosts文件"></a>2、修改hosts文件</h3><p>将 DNS服务器与Address 以及 站点与Address 映射加入 hosts文件中</p><h3 id="3、刷新DNS缓存"><a href="#3、刷新DNS缓存" class="headerlink" title="3、刷新DNS缓存"></a>3、刷新DNS缓存</h3><p>Linux：<br>sudo /etc/init.d/networking restart</p><p>Windows：<br>ipconfig /flushdns</p><p>Mac：<br>sudo killall -HUP mDNSResponder</p><p>亲测有效，速度有明显提升</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 常识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> DNS </tag>
+            
+            <tag> windows </tag>
+            
+        </tags>
       
     </entry>
     
@@ -24,6 +40,18 @@
         <content type="html"><![CDATA[<h2 id="Windows-命令行文本操作"><a href="#Windows-命令行文本操作" class="headerlink" title="Windows 命令行文本操作"></a>Windows 命令行文本操作</h2><h3 id="cd命令"><a href="#cd命令" class="headerlink" title="cd命令"></a>cd命令</h3><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>cd <span class="token function">test</span></code></pre><p>返回上一级  cd ..</p><h3 id="mkdir-命令"><a href="#mkdir-命令" class="headerlink" title="mkdir 命令"></a>mkdir 命令</h3><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>md 1.txt</code></pre><p>创建文件</p><h3 id="echo-命令"><a href="#echo-命令" class="headerlink" title="echo 命令"></a>echo 命令</h3><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>echo <span class="token string">"Hello1"</span> <span class="token operator">></span> 1.txt</code></pre><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>echo <span class="token string">"Hello2"</span> <span class="token operator">></span> 2.txt</code></pre><p>将“Hello1” 写入1.txt , “Hello2” 写入2.txt</p><h3 id="type-命令"><a href="#type-命令" class="headerlink" title="type 命令"></a>type 命令</h3><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>type 1.txt</code></pre><p>查看文件内容，如查看1.txt 文件的内容</p><h3 id="copy命令"><a href="#copy命令" class="headerlink" title="copy命令"></a>copy命令</h3><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>copy 1.txt + 2.txt copy.txt</code></pre><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>type 1.txt 2.txt <span class="token operator">></span> type.txt</code></pre><p>串联两个文件的内容到一个新的文件</p><h3 id="Rename命令"><a href="#Rename命令" class="headerlink" title="Rename命令"></a>Rename命令</h3><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>rename hello.txt hello_rename.txt</code></pre><h3 id="Copy、Move、Del命令"><a href="#Copy、Move、Del命令" class="headerlink" title="Copy、Move、Del命令"></a>Copy、Move、Del命令</h3><p>Copy</p><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>copy 1.txt <span class="token punctuation">..</span>\test</code></pre><p>复制一个文件到另一个目录</p><p>Move</p><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>move 1.txt <span class="token punctuation">..</span>\test</code></pre><p>移动一个文件到另一个目录</p><p>Del</p><pre class=" language-bash"><code class="language-bash">c:\Users\Administrator<span class="token operator">></span>del 1.txt </code></pre><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 常识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> windows，dos </tag>
+            
+        </tags>
       
     </entry>
     
@@ -37,6 +65,18 @@
         <content type="html"><![CDATA[<h2 id="hexo-GitHub搭建博客"><a href="#hexo-GitHub搭建博客" class="headerlink" title="hexo+GitHub搭建博客"></a>hexo+GitHub搭建博客</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装node.js<br>安装hexo</p><h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>init</p><pre class=" language-bash"><code class="language-bash">$ hexo init <span class="token punctuation">[</span>folder<span class="token punctuation">]</span></code></pre><p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p><a id="more"></a><h3 id="新建"><a href="#新建" class="headerlink" title="新建"></a>新建</h3><p>new</p><pre class=" language-bash"><code class="language-bash"><span class="token variable">$hexo</span> new <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token operator">&lt;</span>title<span class="token operator">></span></code></pre><p>新建一篇文章。如果标题包含空格的话，请使用引号括起来。</p><p>参数    描述<br>-p, –path    自定义新文章的路径<br>-r, –replace    如果存在同名文章，将其替换<br>-s, –slug    文章的 Slug，作为新文章的文件名和发布后的 URL</p><pre class=" language-bash"><code class="language-bash"><span class="token variable">$hexo</span> new page --path about/me <span class="token string">"About me"</span></code></pre><pre class=" language-bash"><code class="language-bash"><span class="token variable">$hexo</span> new page --path about/me</code></pre><h3 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h3><p>generate</p><pre class=" language-bash"><code class="language-bash"><span class="token variable">$hexo</span> generate 可以简写为 <span class="token variable">$hexo</span> g</code></pre><p>publish</p><pre class=" language-bash"><code class="language-bash"><span class="token variable">$hexo</span> publish <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token operator">&lt;</span>filename<span class="token operator">></span></code></pre><p>发表草稿。</p><h3 id="hexo服务器"><a href="#hexo服务器" class="headerlink" title="hexo服务器"></a>hexo服务器</h3><p>server</p><pre class=" language-bash"><code class="language-bash"><span class="token variable">$hexo</span> server</code></pre><p>启动服务器。默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a><br>选项    描述<br>-p, –port    重设端口<br>-s, –static    只使用静态文件<br>-l, –log    启动日记记录，使用覆盖记录格式</p><h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>deploy</p><pre class=" language-bash"><code class="language-bash"><span class="token variable">$hexo</span> deploy </code></pre><p>部署网站 也可简写为 $hexo d</p><h3 id="渲染"><a href="#渲染" class="headerlink" title="渲染"></a>渲染</h3><p>render</p><pre class=" language-bash"><code class="language-bash"><span class="token variable">$hexo</span> render <span class="token operator">&lt;</span>file1<span class="token operator">></span> <span class="token punctuation">[</span>file2<span class="token punctuation">]</span> <span class="token punctuation">..</span>.</code></pre><p>渲染文件</p><h3 id="迁移"><a href="#迁移" class="headerlink" title="迁移"></a>迁移</h3><p>migrate</p><pre class=" language-bash"><code class="language-bash"><span class="token variable">$hexo</span> migrate <span class="token operator">&lt;</span>type<span class="token operator">></span></code></pre><p>从其他博客系统 迁移内容。</p><h3 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h3><p>clean</p><pre class=" language-bash"><code class="language-bash">$ hexo clean</code></pre><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p><p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p><h3 id="列出"><a href="#列出" class="headerlink" title="列出"></a>列出</h3><p>list</p><pre class=" language-bash"><code class="language-bash"><span class="token variable">$hexo</span> list <span class="token operator">&lt;</span>type<span class="token operator">></span></code></pre><p>列出网站资料</p><h3 id="版本"><a href="#版本" class="headerlink" title="版本"></a>版本</h3><p>version</p><pre class=" language-bash"><code class="language-bash">$ hexo version</code></pre><p>显示 Hexo 版本</p><p>选项<br>安全模式 $ hexo –safe     在安全模式下，不会载入插件和脚本。当您在安装新插件遭遇问题时，可以尝试以安全模式重新执行。<br>调试模式 $ hexo –debug    在终端中显示调试信息并记录到 debug.log。当您碰到问题时，可以尝试用调试模式重新执行一次，并 提交调试信息到 GitHub。<br>简洁模式 $ hexo –silent   隐藏终端信息。</p><h3 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h3><pre class=" language-bash"><code class="language-bash">$ hexo --draft</code></pre><p>显示 source/_drafts 文件夹中的草稿文章。</p><h3 id="自定义-CWD"><a href="#自定义-CWD" class="headerlink" title="自定义 CWD"></a>自定义 CWD</h3><pre class=" language-bash"><code class="language-bash">$ hexo --cwd /path/to/cwd</code></pre><p>自定义当前工作目录（Current working directory）的路径。</p><h2 id="自定义配置文件的路径"><a href="#自定义配置文件的路径" class="headerlink" title="自定义配置文件的路径"></a>自定义配置文件的路径</h2><h3 id="使用-custom-yml-代替默认的-config-yml"><a href="#使用-custom-yml-代替默认的-config-yml" class="headerlink" title="使用 custom.yml 代替默认的 _config.yml"></a>使用 custom.yml 代替默认的 _config.yml</h3><pre class=" language-bash"><code class="language-bash">$ hexo server --config custom.yml</code></pre><p>自定义配置文件的路径，指定这个参数后将不再使用默认的 _config.yml。</p><p>也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径</p><h3 id="使用-custom-yml-custom2-json-和-custom3-yml，其中-custom3-yml-优先级最高，其次是-custom2-json"><a href="#使用-custom-yml-custom2-json-和-custom3-yml，其中-custom3-yml-优先级最高，其次是-custom2-json" class="headerlink" title="使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json"></a>使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate --config custom.yml,custom2.json,custom3.yml</code></pre><p>当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 _multiconfig.yml。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。<br>这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo，node.js </tag>
+            
+        </tags>
       
     </entry>
     
@@ -47,9 +87,23 @@
       <link href="/2020/03/18/jie-kou-ce-shi/"/>
       <url>/2020/03/18/jie-kou-ce-shi/</url>
       
-        <content type="html"><![CDATA[<p>Python语言实现 Web API接口测试<br>    根据接口测试用例，构造出相应的HTTP请求，发送给服务端,接受并检查响应消息</p><p>Http协议<br>浏览器和网站服务器之间<br>服务器和服务器之间</p><p>API文档-接口信息</p><p>抓包工具</p><p>内置库httplib、urllib2</p><p>第三方库urllib3、requests、pyCurl</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+        <content type="html"><![CDATA[<h2 id="Web-API接口测试"><a href="#Web-API接口测试" class="headerlink" title="Web API接口测试"></a>Web API接口测试</h2><p>Python语言，根据接口测试用例，构造出相应的HTTP请求，发送给服务端,接受并检查响应消息</p><h3 id="Http协议"><a href="#Http协议" class="headerlink" title="Http协议"></a>Http协议</h3><p>浏览器和网站服务器之间<br>服务器和服务器之间</p><h3 id="API文档-接口信息"><a href="#API文档-接口信息" class="headerlink" title="API文档-接口信息"></a>API文档-接口信息</h3><h3 id="抓包工具"><a href="#抓包工具" class="headerlink" title="抓包工具"></a>抓包工具</h3><h3 id="内置库"><a href="#内置库" class="headerlink" title="内置库"></a>内置库</h3><p>httplib、urllib2</p><h3 id="第三方库"><a href="#第三方库" class="headerlink" title="第三方库"></a>第三方库</h3><p>urllib3、requests、pyCurl</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
       
       
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+            <tag> api </tag>
+            
+        </tags>
       
     </entry>
     
