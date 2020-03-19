@@ -467,7 +467,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    763
+                    775
                 </div>
                 
 
@@ -529,10 +529,12 @@
 <p>显示 source/_drafts 文件夹中的草稿文章。</p>
 <h3 id="自定义-CWD"><a href="#自定义-CWD" class="headerlink" title="自定义 CWD"></a>自定义 CWD</h3><pre class=" language-bash"><code class="language-bash">$ hexo --cwd /path/to/cwd</code></pre>
 <p>自定义当前工作目录（Current working directory）的路径。</p>
-<h2 id="自定义配置文件的路径"><a href="#自定义配置文件的路径" class="headerlink" title="自定义配置文件的路径"></a>自定义配置文件的路径</h2><h3 id="使用-custom-yml-代替默认的-config-yml"><a href="#使用-custom-yml-代替默认的-config-yml" class="headerlink" title="使用 custom.yml 代替默认的 _config.yml"></a>使用 custom.yml 代替默认的 _config.yml</h3><pre class=" language-bash"><code class="language-bash">$ hexo server --config custom.yml</code></pre>
+<h2 id="自定义配置文件的路径"><a href="#自定义配置文件的路径" class="headerlink" title="自定义配置文件的路径"></a>自定义配置文件的路径</h2><h3 id="单个配置文件"><a href="#单个配置文件" class="headerlink" title="单个配置文件"></a>单个配置文件</h3><p>使用 custom.yml 代替默认的 _config.yml</p>
+<pre class=" language-bash"><code class="language-bash">$ hexo server --config custom.yml</code></pre>
 <p>自定义配置文件的路径，指定这个参数后将不再使用默认的 _config.yml。</p>
 <p>也可以使用逗号分隔（无空格）的多个 YAML 或 JSON 文件的路径</p>
-<h3 id="使用-custom-yml-custom2-json-和-custom3-yml，其中-custom3-yml-优先级最高，其次是-custom2-json"><a href="#使用-custom-yml-custom2-json-和-custom3-yml，其中-custom3-yml-优先级最高，其次是-custom2-json" class="headerlink" title="使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json"></a>使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate --config custom.yml,custom2.json,custom3.yml</code></pre>
+<h3 id="多个配置文件"><a href="#多个配置文件" class="headerlink" title="多个配置文件"></a>多个配置文件</h3><p>使用 custom.yml, custom2.json 和 custom3.yml，其中 custom3.yml 优先级最高，其次是 custom2.json</p>
+<pre class=" language-bash"><code class="language-bash">$ hexo generate --config custom.yml,custom2.json,custom3.yml</code></pre>
 <p>当你指定了多个配置文件以后，Hexo 会按顺序将这部分配置文件合并成一个 _multiconfig.yml。如果遇到重复的配置，排在后面的文件的配置会覆盖排在前面的文件的配置。<br>这个原则适用于任意数量、任意深度的 YAML 和 JSON 文件。</p>
 <script>
         document.querySelectorAll('.github-emoji')
